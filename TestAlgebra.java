@@ -139,6 +139,8 @@ public class TestAlgebra {
         
         boolean test1 = Algebra.div(12, 3) == 4;
         System.out.println("Test 1 (basic division): " + (test1 ? "PASS" : "FAIL"));
+        System.out.println("Test 1 (Algebra.div(12, 3)): " + (Algebra.div(12, 3)));
+
         
         boolean test2 = Algebra.div(25, 7) == 3;
         System.out.println("Test 2 (integer division): " + (test2 ? "PASS" : "FAIL"));
