@@ -65,7 +65,7 @@ public class Anagram {
 		// Replace the following statement with your code
 		str = str.toLowerCase();
 		String newStr = "";
-		String replaceChar = "><!? .,-_";
+		String replaceChar = "><!?.,-_";
 		for (int i = 0; i < str.length(); i++) {
 			char letter = str.charAt(i);
 			if (replaceChar.indexOf(letter) != -1) {
