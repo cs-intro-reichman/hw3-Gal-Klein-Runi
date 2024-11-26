@@ -67,13 +67,14 @@ public class LoanCalc {
 		// Replace the following statement with your code
 		double lo = loan / n;
 		double hi = loan * 2;
+		iterationCounter = 0;
+
 	
 		while (endBalance(loan, rate, n, hi) > 0) {
 			hi *= 1.5;
 		}
 	
 		double g = (lo + hi) / 2;
-		iterationCounter = 0;
 	
 		while ((hi - lo) > epsilon) {
 	
