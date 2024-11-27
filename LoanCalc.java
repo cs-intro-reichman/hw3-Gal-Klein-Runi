@@ -88,7 +88,8 @@ public class LoanCalc {
 			}
 	
 			g = (lo + hi) / 2;
-			iterationCounter++;
+			if ((hi - lo) > epsilon) {
+			iterationCounter++;}
 		}
 	
 		return g;
