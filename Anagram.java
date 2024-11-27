@@ -32,28 +32,31 @@ public class Anagram {
 		// Replace the following statement with your code
 		str1 = preProcess(str1);
 		str2 = preProcess(str2);
-
-		if (str1.length() != str2.length()) {
-			return false;
-		}
-
+	
 		String remainStr2 = str2;
-
+	
 		for (int i = 0; i < str1.length(); i++) {
 			char checkedLetter = str1.charAt(i);
+	
+			if (checkedLetter == ' ') {
+				continue;
+			}
+	
 			int checkedIndex = remainStr2.indexOf(checkedLetter);
 			if (checkedIndex == -1) {
 				return false;
-			} else {
-				remainStr2 = remainStr2.substring(0, checkedIndex) + remainStr2.substring(checkedIndex + 1);
 			}
-
+	
+			remainStr2 = remainStr2.substring(0, checkedIndex) + remainStr2.substring(checkedIndex + 1);
 		}
-		if (remainStr2.length() == 0) {
-			return true;
+	
+		for (int j = 0; j < remainStr2.length(); j++) {
+			if (remainStr2.charAt(j) != ' ') {
+				return false;
+			}
 		}
-
-		return false;
+	
+		return true;
 	}
 
 	// Returns a preprocessed version of the given string: all the letter characters
